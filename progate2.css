@@ -1,3 +1,8 @@
+* {
+  /* border+padding+セレクタ */
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN";
@@ -9,7 +14,9 @@ a {
 }
 
 .container {
-  width: 1170px;
+  /* どんなに幅が大きくなっても1170pxの幅で100％の表示*/
+  max-width: 1170px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -36,6 +43,7 @@ a {
 
 .btn-wrapper {
   margin: 20px 0;
+  text-align: center;
 }
 
 .btn-wrapper p {
@@ -62,6 +70,7 @@ a {
   opacity: 0.8;
   /* 要素に丸みをつける */
   border-radius: 4px;
+  text-align: center;
 }
 
 .btn:hover {
@@ -95,9 +104,7 @@ header {
 
 .header-right {
   float: right;
-  background-color: rgba(255, 255, 255, 0.3);
-  /*要素のアニメーションの指定 (変化の対象、時間)*/
-  transition: all 0.5s;
+  margin-right: -25px;
 }
 
 .header-right:hover {
@@ -109,18 +116,21 @@ header {
   padding: 0 25px;
   color: white;
   display: block;
+  float: left;
+  transition: all 0.5s;
 }
 
 .lesson-wrapper {
-  height: 500px;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 80px;
   background-color: #f7f7f7;
   text-align: center;
 }
 
 .heading {
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding-top: 80px;
+  padding-bottom: 50px;
   color: #5f5d60;
 }
 
@@ -142,16 +152,16 @@ header {
 .lesson-icon p {
   /*要素同士を重ねる(サイト全体の左上部分を基準)*/
   position: absolute;
-  top: 90px;
+  top: 44%;
   width: 100%;
   color: white;
 }
 
-.txt-contents {
+.text-contents {
   width: 80%;
   display: inline-block;
-  margin-top: 20px;
-  font-size: 12px;
+  margin-top: 15px;
+  font-size: 13px;
   color: #b3aeb5;
 }
 
@@ -191,4 +201,5 @@ footer p {
 
 footer {
   padding-top: 30px;
+  padding-bottom: 20px;
 }
