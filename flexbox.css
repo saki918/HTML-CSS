@@ -1,0 +1,60 @@
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 60px 0px;
+  text-align: center;
+}
+li {
+  color: white;
+  height: 80px;
+  line-height: 80px;
+}
+.li1 {
+  background-color: #ffc562;
+}
+.li2 {
+  background-color: #a0c3f7;
+}
+.li3 {
+  background-color: #ff8db3;
+}
+.li4 {
+  background-color: #88e7ce;
+}
+
+/* 指定した親要素の子要素を横並び */
+
+.flex-list {
+  display: flex;
+}
+/* 子要素を親要素の幅に応じて伸ばしたい要素に指定 */
+
+.flex-list li {
+  flex: auto;
+}
+
+/* タブレット向けレイアウト */
+@media (max-width: 1000px) {
+  .flex-list {
+    /* 子要素のサイズに応じて折り返すことができる。 折り返したい要素の親要素に指定します。折り返したい要素自身には列数に応じたwidthを指定 */
+    flex-wrap: wrap;
+  }
+  .flex-list li {
+    width: 50%;
+  }
+}
+
+/* スマホ向けレイアウト */
+/* ブレイクポイントが670px以下の時のメディアクエリを設定してください */
+@media (max-width: 670px) {
+  /* 子要素を上から下へ並べます 縦に並べたい要素の親要素に記述 */
+  .flex-list {
+    flex-direction: column;
+  }
+  
+  /* block要素の中央寄せ */
+  .flex-list li {
+    margin: 0 auto;
+  }
+  
+}
